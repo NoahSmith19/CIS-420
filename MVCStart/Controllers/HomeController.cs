@@ -27,5 +27,11 @@ namespace MVCStart.Controllers
             return View();
         }
 
+        public ActionResult Assignment1()
+        {
+            ViewBag.Message = "Assignment 1";
+
+            return View();
+        }
     }
 }
