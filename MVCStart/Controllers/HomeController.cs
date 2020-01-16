@@ -33,5 +33,13 @@ namespace MVCStart.Controllers
 
             return View();
         }
+
+        public ActionResult qwerty()
+        {
+            ViewBag.Message = "lsaijdlksajd";
+
+            return View();
+        }
+
     }
 }
