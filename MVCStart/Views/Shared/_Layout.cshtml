@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -12,6 +13,12 @@
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/jqueryui")
     @RenderSection("scripts", false)
+    <link rel="stylesheet" href="~/Content/leaflet.css" />
+    <script src="~/Scripts/leaflet.js"></script>
+    <script src='https://api.mapbox.com/mapbox.js/v3.2.1/mapbox.js'></script>
+    <link href='https://api.mapbox.com/mapbox.js/v3.2.1/mapbox.css' rel='stylesheet' />
+    <script src="~/Scripts/MvcGrid/mvc-grid.js"></script>
+    <link href="~/Content/MvcGrid/mvc-grid.css" rel="stylesheet">
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -41,11 +48,11 @@
             <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
         </footer>
     </div>
-
-
 </body>
 </html>
 
 <script>
-
+    [].forEach.call(document.getElementsByClassName('mvc-grid'), function (element) {
+        new MvcGrid(element);
+    });
 </script>
